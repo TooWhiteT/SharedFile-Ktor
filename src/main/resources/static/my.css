@@ -1,0 +1,80 @@
+*{
+    margin: 0px;
+}
+
+body {
+    /* 默认竖屏背景图 */
+    background-image: url('background/portrait-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    backdrop-filter: blur(10px);
+    /*z-index: 99999;*/
+}
+
+/* 横屏时加载横屏背景图 */
+@media (orientation: landscape) {
+    body {
+        background-image: url('background/landscape-background.png');
+    }
+}
+
+.container {
+    display: flex;
+    /* 或 display: inline-flex; */
+    flex-direction: row; /* 水平排列 */
+    flex-wrap: wrap; /* 换行 */
+    align-content: center;
+    justify-content: center;
+}
+
+.item {
+    width: 250px;
+    text-align: center;
+    /*flex: 1; !* 宽度等分 *!*/
+    margin: 20px 10px; /* 顶20px，右和左10px，底20px */
+    padding: 20px;
+    border-radius: 25px;
+    background: linear-gradient(to right, rgb(252, 92, 125), rgb(106, 130, 251)); /* 渐变色 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: 0px 0px 60px #1f4c65;
+}
+
+.type_icon {
+    width: 200px;
+    height: 200px;
+}
+
+.name_size {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.date_size {
+    padding: 10px 0px;
+    font-size: 20px;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+.floating-button img {
+    width: 25px;
+    height: 25px;
+}
+
+
+
