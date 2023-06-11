@@ -60,8 +60,8 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 50px;
-    height: 50px;
+    width: 5vmax;
+    height: 5vmax;
     background-color: #FFD700;
     border-radius: 50%;
     display: flex;
@@ -72,8 +72,8 @@ body {
 }
 
 .floating-button img {
-    width: 25px;
-    height: 25px;
+    width: 2.5vmax;
+    height: 2.5vmax;
 }
 
 

@@ -10,8 +10,8 @@
     <#list data as item>
         <div class="item" onclick="location.href='${item.url}';">
             <img class="type_icon" src="${item.icon}"/>
-            <span class="name_size"><b>${item.name}</b></span>
-            <span class="date_size">${item.date}</span>
+            <p class="name_size"><b>${item.name}</b></p>
+            <p class="date_size">${item.date}</p>
         </div>
     </#list>
 </div>
