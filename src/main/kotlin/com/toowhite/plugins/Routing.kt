@@ -47,7 +47,13 @@ fun Application.configureRouting() {
                     url = "./share/${it.name}",
                     icon = getTypeIcon(it.name),
                     date = LocalDateTime.ofInstant(
-                        Instant.ofEpochMilli(Files.readAttributes(it.toPath(), BasicFileAttributes::class.java).creationTime().toMillis()),
+                        Instant.ofEpochMilli(
+                            Files.readAttributes(
+                                it.toPath(),
+                                BasicFileAttributes::class.java
+                            ).creationTime()
+                                .toMillis()
+                        ),
                         ZoneId.systemDefault()
                     ).format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
                 )
